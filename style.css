@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    color: rgb(218, 218, 218);
+    font-size: 1.2rem;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+    overflow: hidden;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(#ffc107, #e91e63);
+    border-radius: 50%;
+    transform: translate(-250px, -120px);
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(#2196f3, #31ff38);
+    border-radius: 50%;
+    transform: translate(250px, 120px);
+}
+
+.calculator{
+    position: relative;
+    z-index: 999;
+    width: 16em;
+    margin: 1em auto;
+    overflow: hidden;
+    border-radius:10px;
+    background: rgba(255, 255, 255,0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);   
+    backdrop-filter: blur(25px);
+
+}
+
+.screen{
+    height: 5em;
+    text-align: right;
+    padding-right: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255,0.2);
+}
+
+.screen .result{
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.screen .summary{
+    height: 1.5em;
+    padding-top: 10px;
+    letter-spacing: 1px;
+}
+
+.buttons{
+    display: flex;
+}
+
+.buttons span{
+    user-select: none;
+    text-align: center;
+    line-height: 4em;
+    cursor: pointer;
+}
+
+.buttons .left {
+    width: 12em;
+}
+
+.buttons .left span{
+    float: left;
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border-bottom: 1px solid rgba(255, 255, 255,0.1);
+    border-right: 1px solid rgba(255, 255, 255,0.1);
+}
+
+.buttons .left span:hover,
+.buttons .right span:hover{
+    background: rgba(255, 255, 255,0.2);
+    color: #fff;
+}
+
+.active,
+.buttons .left span:active,
+.buttons .right span:active{
+    background: rgba(255, 255, 255,0.8);
+    color:#fff;
+}
+
+.buttons .left .zero{
+    width: 8em;
+    position: relative;
+}
+
+.buttons .right{
+    width: 4em;
+}
+
+.buttons .right span{
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border-bottom: 1px solid rgba(255, 255, 255,0.2);
+}
+
+.buttons .right .plus, .buttons .right .equal{
+    height: 8em;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+  
